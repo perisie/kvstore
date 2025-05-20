@@ -1,4 +1,4 @@
-module perisie.com/kvstore
+module github.com/perisie/kvstore
 
 go 1.23.0
 
