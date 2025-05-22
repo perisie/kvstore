@@ -16,10 +16,7 @@ func Kv_store_mouse_new(data_dir_path string) *Kv_store_mouse {
 }
 
 func (k *Kv_store_mouse) Create_not_exist(key string, value string) (*Key_value, error) {
-	kv, err := k.Get(key)
-	if err != nil {
-		return nil, err
-	}
+	kv, _ := k.Get(key)
 	if kv == nil || !kv.Exist() {
 		return k.Create(key, value)
 	} else {
